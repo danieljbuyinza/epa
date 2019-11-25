@@ -1,0 +1,36 @@
+{
+  "name": "epa",
+  "version": "1.0.0",
+  "description": "An event planner app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieljbuyinza/epa.git"
+  },
+  "keywords": [
+    "event",
+    "planner"
+  ],
+  "author": "aquila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danieljbuyinza/epa/issues"
+  },
+  "homepage": "https://github.com/danieljbuyinza/epa#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.12",
+    "path": "^0.12.7",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
