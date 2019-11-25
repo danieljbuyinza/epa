@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Register
+        link(rel="stylesheet", href="bootstrap/css/bootstrap.css")
+        link(rel="stylesheet", href="styles.css")
+    body
+        br
+        div.row.justify-content-center
+            div.col-md-6
+                div.card-body
+                    header.card-header
+                        h4.card-title Event Planner App - Register
+                    form(action="/register", method="POST")
+                        div.form-row
+                            .col.form-group
+                                label First name
+                                input.form-control(name="firstName")
+                            .col.form-group
+                                label Last name
+                                input.form-control(name="lastName")
+                        div.form-row
+                            .col.form-group
+                                label Username
+                                input.form-control(name="username")
+                        div.form-row
+                            .col.form-group
+                                label Email address
+                                input.form-control(type="email", name="emailAddress")
+                            .col.form-group
+                                label Phone number
+                                input.form-control(name="phoneNumber")
+                        div.form-row
+                            .col.form-group
+                                label Category
+                                select.form-control(name="country")
+                                    option(value="Planner") Planner
+                                    option(value="Vendor") Vendor
+                                    option(value="Admin") Admin
+                        div.form-row
+                            .col.form-group
+                                label Password
+                                input.form-control(type="password", name="password")
+                            .col.form-group
+                                label Confirm password
+                                input.form-control(type="password", name="password")
+                        div.form-row
+                            .col.form-group
+                                button#register-button.form-control.btn.btn-primary.btn-block(type="submit") Submit
+                            .col.form-group
+                                button.form-control.btn.btn-secondary.btn-block(type="reset") Cancel
