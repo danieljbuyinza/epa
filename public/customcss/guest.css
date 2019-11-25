@@ -1,0 +1,27 @@
+.bg-pink{
+    background-color: rgb(243, 188, 197) !important;
+
+}
+
+.leftt, .cat{
+background-color: rgb(252, 232, 232);
+height: auto;
+box-shadow: 1px 1px 1px rgb(199, 198, 198);
+}
+
+
+.cat{   
+    flex-direction: column;
+    
+} 
+
+li{
+    list-style: none;
+}
+
+.separate{
+    padding-left: 15px;
+}
+ li a{
+     color: black;
+ }
