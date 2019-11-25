@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
+const bcryptjs = require("bcryptjs");
 const session = require("express-session");
 
 const server = express();
