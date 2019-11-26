@@ -2,18 +2,21 @@ extends layout
 
 block content 
   
-    .main.container
-        .row
-        .col-md-6.col-md-offset-3
-            h1.display-4.m-b-2 Log In
-            form(method='POST' action='/login')
-            div.form-group
-                label(for='name') First Name
-                input.form-control(type='text' id='first name' placeholder='name' name='firstname')
-            div.form-group
-                label(for='email') Email
-                input.form-control(type='text' id='email' placeholder='email' name='email')
-            div.form-group
-                label(for='password') Password
-                input.form-control(type='password' id='password' placeholder='password' name='password')
-            button.btn.btn-primary(type='submit') Log in 
+    div.row.justify-content-center
+        div.col-md-6
+            div.card.my-4
+                header.card-header
+                    h4.card-title Login
+                article.card-body
+                    form(method='POST' action='/login')
+                    div.form-group
+                        div.col.form-group
+                            label(for='name') User Name
+                            input.form-control(type='text' id='username'  name='username')
+                    div.form-group
+                        div.col.form-group
+                            label(for='password') Password
+                            input.form-control(type='password' id='password' placeholder='password' name='password')
+                    div.form-group
+                        div.col.form-group
+                            button.btn.btn-primary(type='submit') Log in 
