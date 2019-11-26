@@ -15,8 +15,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // route
-app.get('/', (req, res)=> {
-    res.render('test')
+app.get('/guest', (req, res)=> {
+    res.render('guest')
 });
 app.get("/register", (req, res) => {
     res.render("register");
