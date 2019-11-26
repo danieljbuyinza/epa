@@ -16,22 +16,18 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
 }
-#wed{
-    background-image:url("./Images/Wedding.jpg");
+.wed{
+    background-image:url("../Images/Wedding.jpg");
     
 }
-#birthday{
-    background-image:url("./Images/birthday.jpg");
+.birthday{
+    background-image:url("../Images/birthday.jpg");
     color: #fff;
 }
 
-#grad { 
-    background-image:url("./Images/gradParty.jpg");
-    width: 19vw;
-    height: 13vw;
-    border-radius: 25%; 
+.grad { 
+    background-image:url("../Images/gradParty.jpg");
 } 
-
 
 @media(max-width:900px){
 #pics{
