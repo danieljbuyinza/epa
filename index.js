@@ -18,9 +18,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res)=> {
     res.render('test')
 });
+app.get("/register", (req, res) => {
+    res.render("register");
+})
 
 //  Listening for requests: the server
 app.listen(5000, ()=>{
     console.log("listening on 5000");
-    
 })
+
+
+

@@ -1,5 +1,58 @@
 extends layout
 
 block content
+    div.container-fluid.mx-1.my-2
+        div.row
+            div.col-md-3.left
+                div.card
+                    header.card-header.pinch
+                        h4.card-title.text-center.pt-1 Guest Groups
+                    article.card-body
+                        ul.nav.flex-column
+                            li.nav-item
+                                a.nav-link.acolor(href="#add") Add Guest
+                            li.nav-item
+                                a.nav-link(href="#onlist") Onlist
+            
+            div.col-md-8
+                div.row.cat
+                    h4.mx-5.mt-2#add Add guest
+                        form.form-inline.my-3(method="POST" action="")
+                            div.form-row
+                                div.col.form-group.mb-2
+                                    label.sr-only Name
+                                    input.form-control( name="name" placeholder="Name")
+                            div.form-row                     
+                                div.col.form-group.mx-sm-3.mb-2
+                                    label.sr-only Category
+                                    select.form-control(name="category")
+                                        option Choose Category
+                                        option(value="Family") Family
+                                        option(value="Friends") Friends
+                            div.form-row
+                                div.col.form-group.mb-2
+                                    button.btn.btn-outline-primary.btn-block(type="submit") Add          
+                div.row.my-3.mx-4
+                    h4#onlist Onlist  
+                    table.table
+                        thead.thead-light
+                            tr 
+                                th CardNo.
+                                th Name
+                                th Category
+                                th Invitation
+                                th RSVP
+                            
+                            tbody
+                                //- iteration method 
+                                //- each user in users
+                                //-     tr
+                                //-         td #{user.cardNo}
+                                //-         td #{user.name}
+                                //-         td #{user.category}
+                                //-         td #{user.invitation}
+                                //-         td #{user.rsvp}
+                                        
+                                    
+        
 
-    p Hello World
