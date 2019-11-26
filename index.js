@@ -1,28 +1,28 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const path = require("path");
-const bcryptjs = require("bcryptjs");
-const session = require("express-session");
 
-//2.Create a handler to store all the express features
-let server = express();
+// Requiring needed packages
+const express = require("express")
+const app = express();
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"))
+app.use(bodyParser.urlencoded({ extended: true }))
+// setting the static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
-//console.log(__filename)// while __filename brings up to the file on which your working on.
-//console.log(__dirname);// this gives the directory of the folder project
 
-//specify where the engine is to pick views
-//compile them to HTML and then render them
-//or serve them to the client application
-let joinedpath = path.join(__dirname, "views");
-server.set("view engine", "pug");
-server.set("views",joinedpath); 
 
-//setting middleware
-server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({extended:true}))
-
-//3.Configure the server to be able to listen for requests
-server.listen(4000,()=>{
-    console.log("listening on port 4000")
+// route
+app.get('/', (req, res)=> {
+    res.render('test')
+});
+app.get("/register", (req, res) => {
+    res.render("register");
 })
+
+//  Listening for requests: the server
+app.listen(5000, ()=>{
+    console.log("listening on 5000");
+})
+
+
+
+//>>>>>>> 6169bf3d5bbc2889b4541d84e15c8e182c072778
