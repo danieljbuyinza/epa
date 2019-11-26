@@ -3,4 +3,8 @@ footer{
     bottom: 0;
     width: 100%; 
     box-sizing: border-box;
+    background-color: #d4a59a !important;
+}
+#bottom{
+    position: absolute;
 }
