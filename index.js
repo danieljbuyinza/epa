@@ -1,3 +1,4 @@
+// Requiring needed packages
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -13,11 +14,15 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost:27017/node-demo", { useNewUrlParser: true, useUnifiedTopology: true });
 
-//listening on terminal
-app.listen(4000, () => {
-    console.log("listening on 4000");
+
+//  Listening for requests: the server
+app.listen(5000, ()=>{
+    console.log("listening on 5000");
 })
 
 app.get('/home', (req, res) => {
     res.render('home')
+})
+app.get("/login", (req, res) => {
+    res.render("login");
 })

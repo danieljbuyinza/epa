@@ -1,0 +1,28 @@
+nav.navbar.navbar-expand-lg.navbar-light.pinch
+    a.navbar-brand.text-white(href="#") EPA
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+    div.collapse.navbar-collapse#navbarNavDropdown
+        ul.navbar-nav
+            li.nav-item.active
+                a.nav-link.text-white(href="#") Home
+                    span.sr-only(current)
+            li.nav-item
+                a.nav-link.text-white(href="#") About
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle#navbarDropdownMenuLink.text-white(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Products
+                div.dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
+                    a.dropdown-item.text-white(href="#") Vendors
+                    a.dropdown-item.text-white(href="#") Guest List
+                    a.dropdown-item.text-white(href="#") Collaboration
+            li.nav-item
+                a.nav-link.text-white(href="#")
+                    i.fas.fa-user Register
+            li.nav-item
+                a.nav-link.text-white(href="#")
+                    i.fas.fa-sign-in-alt Login
+        //- form.form-inline.my-2.my-lg-0
+        //-     input.form-control.mr-sm-2(type="search" placeholder="Search" aria-label="Search")
+        //-     button.btn.btn-outline-primary.my-2.my-sm-0(type="submit") Search
+                
+
