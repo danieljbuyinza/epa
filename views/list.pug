@@ -1,0 +1,26 @@
+extends layout
+block content
+    header.card-header
+        h4.card-title Registered users
+
+    table.table 
+        thead.thead-dark
+            tr
+                th Firstname
+                th Lastname
+                th username
+                th emailAddress
+                th phoneNumber
+                th Category
+                th password
+
+            tbody
+                each user in users
+                    tr
+                        td #{user.firstname}
+                        td #{user.lastname}
+                        td #{user.username}
+                        td #{user.emailAddress}
+                        td #{user.phoneNumber}
+                        td #{user.Category}
+                        td #{user.password}
