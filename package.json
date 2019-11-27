@@ -28,6 +28,7 @@
     "express-session": "^1.17.0",
     "mongoose": "^5.7.12",
     "nodemon": "^2.0.1",
+    "passport": "^0.4.0",
     "path": "^0.12.7",
     "pug": "^2.0.4"
   },
