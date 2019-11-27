@@ -40,9 +40,6 @@ app.get('/home', (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 })
-app.get("/register", (req, res) => {
-    res.render("register");
-})
-app.get("/guest", (req, res) => {
-    res.render("guest");
+app.get('/planner', (req, res) => {
+    res.render('planner')
 })
