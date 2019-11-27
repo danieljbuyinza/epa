@@ -34,7 +34,11 @@ app.listen(5000, ()=>{
 })
 
 // Importing routes
+const loginRoute = require('./routes/loginRoute')
+app.use('/login', loginRoute);
 
+const registrationRoute = require('./routes/registration-routes')
+app.use('/register', registrationRoute);
 
 app.get('/home', (req, res) => {
     res.render('home')
@@ -42,9 +46,7 @@ app.get('/home', (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 })
-app.get("/register", (req, res) => {
-    res.render("register");
-})
+
 app.get("/guest", (req, res) => {
     res.render("guest");
 })
