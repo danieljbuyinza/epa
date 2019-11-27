@@ -12,6 +12,7 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
+mongoose.set('useCreateIndex', true);
 
 mongoose.connect("mongodb://localhost:27017/epa", { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -48,5 +49,8 @@ app.use('/guest', guestRoute);
 
 const plannerRoute = require('./routes/plannerRoute')
 app.use('/planner', plannerRoute);
+
+const vendorRoute = require('./routes/vendorRoute')
+app.use('/vendor', vendorRoute);
 
 

@@ -1,0 +1,45 @@
+extends layout
+
+block content
+
+    div.container-fluid
+        div.row.my-3
+            div.col-md-4
+                div.card
+                    header.card-header.pinch
+                            h4.card-title.text-center.pt-1 Welcome 
+                            //- #{currentUser.firstname}  
+                    article.card-body
+                        ul.nav.flex-column
+                            li.nav-item
+                                a.nav-link.active(href="") Profile
+                            li.nav-item
+                                a.nav-link.acolor(href="") inbox
+                            li.nav-item
+                                a.nav-link.acolor(href="") notifications
+                            li.nav-item
+                                form(method="post" action='/logout')
+                                    button.btn.btn-outline-danger.mx-3(type="submit") Log out
+            div.col-md-7.mx-1.border
+                form.mt-3(method='POST' action="/upload" enctype='multipart/form-data')
+                    div.form-row
+                        div.col-md-5 
+                            input(type='file', name='myFile')
+                            
+                        div.col-md-7
+                            input(type='submit', value='Upload Image')
+                    div.form-row.my-3
+                        div.col-md-3 
+                            <label for="comment">Add Description:</label> 
+                        div.col-md-7
+                            <textarea class="form-control" rows="3" id="comment"></textarea>
+
+                    div.form-row.mt-3
+                        div.col 
+                            button.btn.pinch.text-white(type="submit") Update Profile
+
+
+
+
+        
+               
