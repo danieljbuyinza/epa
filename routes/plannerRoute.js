@@ -4,9 +4,9 @@ const router = express.Router();
 const User = require('../models/registration-model');
 
 
-// gets and displays a home page
+// gets and displays a planner page
 router.get('/', (req, res) => {
-    res.render('home');
+    res.render('planner');
 })
 
 module.exports = router; 

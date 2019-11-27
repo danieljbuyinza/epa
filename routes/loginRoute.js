@@ -8,3 +8,6 @@ const User = require('../models/registration-model');
 router.get('/', (req, res) => {
     res.render('login');
 })
+
+
+module.exports = router; 

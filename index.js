@@ -40,12 +40,13 @@ app.use('/login', loginRoute);
 const registrationRoute = require('./routes/registration-routes')
 app.use('/register', registrationRoute);
 
-app.get('/home', (req, res) => {
-    res.render('home')
-})
-app.get("/login", (req, res) => {
-    res.render("login");
-})
-app.get('/planner', (req, res) => {
-    res.render('planner')
-})
+const homeRoute = require('./routes/homeRoute')
+app.use('/home', homeRoute);
+
+const guestRoute = require('./routes/guestRoute')
+app.use('/guest', guestRoute);
+
+const plannerRoute = require('./routes/plannerRoute')
+app.use('/planner', plannerRoute);
+
+
