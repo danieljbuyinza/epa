@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
 const session = require("express-session");
+const passport = require("passport");
 
 const app = express();
 app.set("view engine", "pug");
