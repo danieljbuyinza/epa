@@ -12,16 +12,16 @@ app.set("views", path.join(__dirname, "views"))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/node-demo", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost:27017/epa", { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 // route
-app.get('/', (req, res)=> {
-    res.render('test')
-});
-app.get("/register", (req, res) => {
-    res.render("register");
-})
+// app.get('/', (req, res)=> {
+//     res.render('test')
+// });
+const registrationRoutes = require("./routes/registration-routes");
+app.use("/register", registrationRoutes);
+
 app.get("/login", (req, res) => {
     res.render("login");
 })
