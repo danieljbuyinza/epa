@@ -26,3 +26,6 @@ app.get('/home', (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 })
+app.get('/planner', (req, res) => {
+    res.render('planner')
+})
