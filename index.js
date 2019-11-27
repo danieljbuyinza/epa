@@ -33,6 +33,8 @@ app.listen(5000, ()=>{
     console.log("listening on 5000");
 })
 
+// Importing routes
+
 
 app.get('/home', (req, res) => {
     res.render('home')
