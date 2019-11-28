@@ -22,6 +22,9 @@ mongoose.connect("mongodb://localhost:27017/epa", { useNewUrlParser: true, useUn
 const registrationRoutes = require("./routes/registration-routes");
 app.use("/register", registrationRoutes);
 
+const vendorsRoutes = require("./routes/vendors-routes");
+app.use("/vendors", vendorsRoutes);
+
 app.get("/login", (req, res) => {
     res.render("login");
 })
