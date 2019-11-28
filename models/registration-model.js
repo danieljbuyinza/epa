@@ -35,7 +35,7 @@ registrationSchema.pre("save", function(next) {
     next();
 })
 
-//authenticate input against database
+// authenticate input against database
 registrationSchema.statics.authenticate = async function(username, password) {
     const user = await this.findOne({ username: username })
     if (!user) {
