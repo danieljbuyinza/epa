@@ -3,11 +3,11 @@ const express =  require('express');
 const path = require('path');
 const router = express.Router();
 const bodyParser = require('body-parser');
-// const multer = require('multer');
+const multer = require('multer');
 
 
 // Set Storage Engine
-/* const storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './public/upload/')
     },
@@ -21,13 +21,13 @@ const upload = multer({
     storage: storage,
     limits:{fileSize: 10000000}
 })
- */
+
 // Upload Image
 router.get('/', (req, res)=> {
-    res.render('vendor')
+    res.render('vendor-profile')
 });
 
-/* router.post('/', upload.single('myImage'),function(req, res, next) {
+router.post('/', upload.single('myImage'),function(req, res, next) {
     const file = req.file //fetches the file
     if (!file){
         const error = new Error("Please upload File")
@@ -36,6 +36,6 @@ router.get('/', (req, res)=> {
         return next(error);    
     }
     res.render('uploads', {image: req.file.originalname})
-}); */
+});
 
 module.exports = router;

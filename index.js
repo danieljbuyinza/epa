@@ -50,7 +50,7 @@ app.use('/guest', guestRoute);
 const plannerRoute = require('./routes/plannerRoute')
 app.use('/planner', plannerRoute);
 
-const vendorRoute = require('./routes/vendorRoute')
-app.use('/vendor', vendorRoute);
+const vendorProfileRoute = require('./routes/vendor-profileRoute')
+app.use('/vendor-profile', vendorProfileRoute);
 
 

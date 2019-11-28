@@ -1,10 +1,7 @@
 footer{
     position: absolute;
-    bottom: -50;
+    /* bottom: 50; */
     width: 100%; 
     box-sizing: border-box;
     background-color: #d4a59a !important;
 }
-/* #bottom{
-    position: absolute;
-} */
