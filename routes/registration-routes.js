@@ -19,5 +19,14 @@ router.post("/", async (req, res) => {
     }
 })
 
+// router.get("/search", async (req, res) => {
+//     if (req.session.user) {
+//         const items = await Register.find();
+//         res.render("list", { users: items, currentUser: req.session.user });
+//     } else {
+//         res.redirect("/login");
+//     }
+// })
+
 
 module.exports = router;

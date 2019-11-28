@@ -12,15 +12,20 @@ app.set("views", path.join(__dirname, "views"))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
 
+app.use(session({
+    secret: "thesecret",
+    resave: true,
+    saveUninitialized: false
+}))
+
 mongoose.connect("mongodb://localhost:27017/epa", { useNewUrlParser: true, useUnifiedTopology: true });
 
 
-// route
-// app.get('/', (req, res)=> {
-//     res.render('test')
-// });
 const registrationRoutes = require("./routes/registration-routes");
 app.use("/register", registrationRoutes);
+
+const loginRoutes = require("./routes/login-routes");
+app.use("/login", loginRoutes);
 
 const vendorsRoutes = require("./routes/vendors-routes");
 app.use("/vendors", vendorsRoutes);
