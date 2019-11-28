@@ -18,5 +18,11 @@ block content
                             label(for='password') Password
                             input.form-control(type='password' id='password' placeholder='password' name='password')
                     div.form-group
+                        .col.form-group
+                            label Category
+                            select.form-control(name="category")
+                                option(value="Planner") Planner
+                                option(value="Vendor") Vendor
+                    div.form-group
                         div.col.form-group
                             button.btn.btn-primary(type='submit') Log in 
