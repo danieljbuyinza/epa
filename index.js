@@ -14,20 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
 mongoose.set('useCreateIndex', true);
 
-mongoose.connect("mongodb://localhost:27017/epa", { useNewUrlParser: true, useUnifiedTopology: true });
-
-
-// route
-// app.get('/', (req, res)=> {
-//     res.render('test')
-// });
-const registrationRoutes = require("./routes/registration-routes");
-app.use("/register", registrationRoutes);
-
-app.get("/login", (req, res) => {
-    res.render("login");
-})
-
 
 //  Listening for requests: the server
 app.listen(5000, ()=>{
@@ -35,6 +21,7 @@ app.listen(5000, ()=>{
 })
 
 // Importing routes
+
 const loginRoute = require('./routes/loginRoute')
 app.use('/login', loginRoute);
 
@@ -52,5 +39,12 @@ app.use('/planner', plannerRoute);
 
 const vendorProfileRoute = require('./routes/vendor-profileRoute')
 app.use('/vendor-profile', vendorProfileRoute);
+
+const logoutRoute = require('./routes/logoutRoute')
+app.use('/logout', logoutRoute);
+
+// Mongoose db connection
+mongoose.connect("mongodb://localhost:27017/epa", { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 

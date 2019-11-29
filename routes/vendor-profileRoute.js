@@ -9,7 +9,7 @@ const multer = require('multer');
 // Set Storage Engine
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/upload/')
+        cb(null, './public/vendor-upload/')
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname)
@@ -27,7 +27,7 @@ router.get('/', (req, res)=> {
     res.render('vendor-profile')
 });
 
-router.post('/', upload.single('myImage'),function(req, res, next) {
+router.post('/', upload.single('image'),function(req, res, next) {
     const file = req.file //fetches the file
     if (!file){
         const error = new Error("Please upload File")
@@ -35,7 +35,7 @@ router.post('/', upload.single('myImage'),function(req, res, next) {
         error.httpStatusCode = 400;
         return next(error);    
     }
-    res.render('uploads', {image: req.file.originalname})
+    res.render('vendor-profile', {image: req.file.originalname})
 });
 
 module.exports = router;
