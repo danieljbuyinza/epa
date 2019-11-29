@@ -1,0 +1,22 @@
+
+
+#the-vendors ul {
+    font-size: 12px;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.vendors {
+    background-color: silver;
+    background-blend-mode: overlay;
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 10px;
+    font-weight: 900;
+    padding: 15px 20px 80px 20px;
+}
+
+.vendors:hover {
+    background-blend-mode: normal;
+    color: aliceblue;
+}
